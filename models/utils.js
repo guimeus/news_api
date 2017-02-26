@@ -39,3 +39,18 @@ exports.hasSubscriber = function(user, source) {
     return false
   }
 }
+
+exports.subscribtionForID = function(user, source){
+  var sub
+  var i = 0
+  if (user.subs){
+    while(i < user.subs.length){
+      if (user.subs[i].sourceId.toString() == source._id.toString()){
+        return { name:source.name, weight:user.subs[i].sourceWeight}
+      } else {
+        i++
+      }
+    }
+  }
+  return sub
+}

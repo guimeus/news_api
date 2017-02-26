@@ -5,6 +5,6 @@ var router = express.Router();
 router.use('/authenticate',require('./api/authenticate'));
 router.use('/register',require('./api/register'));
 router.use('/subscribe',require('./api/subscribe'));
-router.use('/feed',require('./api/feed'));
+router.use('/sources',require('./api/sources'));
 
 module.exports = router;
