@@ -1,15 +1,5 @@
 Connected on port 8000
-------------------------RegisterUserAPI-----------------------
-----------------------Sun Feb 26 2017 15:32:05 GMT+0100 (CET)----------------------
-statusCode : 200
-User registered Successfully
-------------------------------------------------------
-adding [object Object]
-creating source
-{ name: 'bbc',
-  _id: 58b2e6fbf2ba6661538e0eac,
-  subscribers: 
-   [ { userId: 58b2e6e4f2ba6661538e0eab,
-       _id: 58b2e6fbf2ba6661538e0eae } ] }
-58b2e6e4f2ba6661538e0eab is not subscribed to source 58b2e6fbf2ba6661538e0eac
-subscrtion ok
+bbc
+cnn
+hgh
+
