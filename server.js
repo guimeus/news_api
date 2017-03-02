@@ -22,6 +22,9 @@ app.use(morgan('dev'));
 app.use(expressjwt({ secret: config.secret}).unless({path: ['/sources','/api/register','/users','/api/authenticate']}));
 app.use(auth.initialize());
 
+var Client = require('node-rest-client').Client;
+
+var client = new Client();
 
 // Basic routes
 app.get('/', function(req,res){
@@ -37,8 +40,22 @@ app.get('/users', function(req,res){
 });
 
 app.get('/sources', function(req,res){
-  source.find({}, function(error,sources){
-    res.json(sources);
+  var category = ""
+  var language = ""
+  if (req.query["category"]){
+    category = req.query["category"]
+  }
+
+  if (req.query["language"]){
+    language = req.query["language"]
+  }
+  var url = config.news_api.sources_endpoint+'?category='+category+'&language='+language
+  client.get(url, function (data, response) {
+    if (data) {
+      res.json(data);
+    } else {
+      res.status(404).json();
+    }
   });
 });
 
