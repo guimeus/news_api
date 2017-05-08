@@ -1,6 +1,6 @@
 module.exports = {
   'secret':'news_api',
-  'database':'mongodb://mobile_client:Vu8X9P[jA3G@9hZt@ds131061.mlab.com:31061/heroku_h53lcs33',
+  'database':'mongodb://mobile_client:rHU2c5Zm63ySeWLc@ds131061.mlab.com:31061/heroku_h53lcs33',
   'apikey':'TW62R0WGbgQ3j4yzL',
   'news_api':{
     'key':'b013eea0cac7462aa193738838d67f33',
